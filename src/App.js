@@ -5,12 +5,11 @@ import Navbar from './components/Navbar';
 import NewsComponent from './components/NewsComponent';
 
 export default class App extends Component {
-  u = 'Hamid';
   render() {
     return (
       <div>
         <Navbar/>
-        <NewsComponent/>
+        <NewsComponent pageSize={20}/>
       </div>
     )
   }
