@@ -56,7 +56,7 @@ export class NewsComponent extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <div className='container my-3 text-center'>
           <h1>Main Heading - devEws</h1>
           {this.state.loading && <Spinner/>}
@@ -73,7 +73,7 @@ export class NewsComponent extends Component {
         <button disabled={this.state.page<=1} type='button' className='btn btn-dark' onClick={this.handlePrevClick}>&larr; Previous</button>
         <button disabled={this.state.page+1 > Math.ceil(this.state.totalResults/20)} type='button' className='btn btn-dark' onClick={this.handleNextClick}>Next &rarr;</button>
         </div>
-      </div>
+      </>
     )
   }
 }
