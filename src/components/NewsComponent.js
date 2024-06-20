@@ -58,9 +58,9 @@ export class NewsComponent extends Component {
           <h1>Main Heading - devEws</h1>
           {this.state.loading && <Spinner/>}
           <div className='row'>
-          {!this.state.loading && this.state.articles.map((element)=>{
+          {!this.state.loading && this.state.articles.map((element, index)=>{
 
-            return <div className='col md-4' key={element.author}>
+            return <div className='col md-4' key={index}>
               <NewsItem title={element.title?(element.title.slice(0, 45)+"..."):""} description={element.description?(element.description.slice(0, 88)+"..."):""} imageUrl={element.urlToImage} newsUrl={element.url}/>
             </div>
           })}
