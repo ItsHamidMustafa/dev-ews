@@ -15,18 +15,18 @@ export default class App extends Component {
         <Router>
             <Navbar/>
           <Routes>
-            <Route exact path='/'><NewsComponent key="general" pageSize={20}  country="us"  category="general"/></Route>
-            <Route exact path='/business'><NewsComponent key="business" pageSize={20}  country="us"  category="business"/></Route>
-            <Route exact path='/entertainment'><NewsComponent key="entertainment" pageSize={20}  country="us"  category="entertainment"/></Route>
-            <Route exact path='/general'><NewsComponent key="general" pageSize={20}  country="us"  category="general"/></Route>
-            <Route exact path='/health'><NewsComponent key="health" pageSize={20}  country="us"  category="health"/></Route>
-            <Route exact path='/science'><NewsComponent key="science" pageSize={20}  country="us"  category="science"/></Route>
-            <Route exact path='/sports'><NewsComponent key="sports" pageSize={20}  country="us"  category="sports"/></Route>
-            <Route exact path='/technology'><NewsComponent key="technology" pageSize={20}  country="us"  category="technology"/></Route>
+            <Route exact path='/' element={<NewsComponent key="general" pageSize={20}  country="us"  category="general"/>}/>
+            <Route exact path='/business' element={<NewsComponent key="business" pageSize={20}  country="us"  category="business"/>}/>
+            <Route exact path='/entertainment' element={<NewsComponent key="entertainment" pageSize={20}  country="us"  category="entertainment"/>}/>
+            <Route exact path='/general' element={<NewsComponent key="generalcomp" pageSize={20}  country="us"  category="general"/>}/>
+            <Route exact path='/health' element={<NewsComponent key="health" pageSize={20}  country="us"  category="health"/>}/>
+            <Route exact path='/science' element={<NewsComponent key="science" pageSize={20}  country="us"  category="science"/>}/>
+            <Route exact path='/sports' element={<NewsComponent key="sports" pageSize={20}  country="us"  category="sports"/>}/>
+            <Route exact path='/technology' element={<NewsComponent key="technology" pageSize={20}  country="us"  category="technology"/>}/>
             </Routes>
         </Router>
-        <Navbar />
-        <NewsComponent key="general" pageSize={20}  country="us"  category="general"/>
+        {/* <Navbar />
+        <NewsComponent key="general" pageSize={20}  country="us"  category="general"/> */}
       </div>
     )
   }
